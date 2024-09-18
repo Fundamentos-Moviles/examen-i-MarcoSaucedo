@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:examen1_srmj/home.dart';
+import 'package:examen1_srmj/utils/constants.dart';
+
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -12,20 +14,17 @@ class _LoginState extends State<Login> {
   TextEditingController user = TextEditingController();
   final pass = TextEditingController();
 
-  // Variable para almacenar el mensaje de error
   String? errorMessage;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color(0xff64011f), // Color de fondo para toda la pantalla
+        color: fondo2,
         child: Stack(
           children: [
-            // Fondo dividido en 3 partes usando un Column con Rows y Expanded
             Column(
               children: [
-                // Primer fila de contenedores de colores
                 Container(
                   height: 204,
                   child: Row(
@@ -33,39 +32,39 @@ class _LoginState extends State<Login> {
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff520120),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff64011f),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo2,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff41011a),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo3,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xffb20222),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo4,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-                // Segunda fila de contenedores
+
                 Container(
                   height: 204,
                   child: Row(
@@ -73,39 +72,39 @@ class _LoginState extends State<Login> {
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xffb20222),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo4,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff41011a),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo3,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff520120),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff64011f),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo2,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-                // Tercera fila de contenedores
+
                 Container(
                   height: 204,
                   child: Row(
@@ -113,32 +112,32 @@ class _LoginState extends State<Login> {
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff41011a),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo3,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xffb20222),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo4,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff64011f),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo2,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xff520120),
-                            borderRadius: BorderRadius.circular(25), // Bordes redondeados
+                            color: fondo,
+                            borderRadius: BorderRadius.circular(25),
                           ),
                         ),
                       ),
@@ -148,7 +147,6 @@ class _LoginState extends State<Login> {
               ],
             ),
 
-            // Contenido encima del fondo
             Padding(
               padding: const EdgeInsets.only(top: 115.0, left: 50.0, right: 50.0),
               child: Container(
@@ -156,7 +154,7 @@ class _LoginState extends State<Login> {
                 padding: const EdgeInsets.all(30.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  color: Colors.white.withOpacity(0.6), // Fondo con opacidad
+                  color: Colors.white.withOpacity(0.6),
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -166,7 +164,7 @@ class _LoginState extends State<Login> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xff520120),
+                        color: titulos,
                       ),
                     ),
                     const SizedBox(height: 20.0),
@@ -204,7 +202,6 @@ class _LoginState extends State<Login> {
                     ),
                     const SizedBox(height: 20.0),
 
-                    // Mostrar el mensaje de error (si existe)
                     if (errorMessage != null)
                       Text(
                         errorMessage!,
@@ -219,18 +216,17 @@ class _LoginState extends State<Login> {
 
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xffa65476),
+                        backgroundColor: botones,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40.0),
                         ),
-                        fixedSize: const Size(200, 40),
+                        fixedSize: const Size(300, 40),
                       ),
                       onPressed: () {
                         setState(() {
                           print('Usuario: ${user.text}');
                           print("Contraseña: ${pass.text}");
 
-                          // Verificar credenciales
                           if (user.text == "test" && pass.text == "FDM1") {
                             Navigator.push(context, MaterialPageRoute(
                                 builder: (context) => Home()));
