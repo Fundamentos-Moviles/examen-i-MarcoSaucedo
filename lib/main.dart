@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:examen1_srmj/login.dart';
+import 'package:examen1_srmj/more_info.dart';
 import 'home.dart';
 
 void main() {

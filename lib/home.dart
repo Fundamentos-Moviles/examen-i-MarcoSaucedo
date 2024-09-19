@@ -196,14 +196,13 @@ class _HomeState extends State<Home> {
               ),
               child: Column(
                 children: [
-                  // Botón de "Ver más"
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(
                           builder: (context) => MoreInfo()));
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.green[400],
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40),
                       ),
@@ -233,7 +232,7 @@ class _HomeState extends State<Home> {
                   ElevatedButton(
                     onPressed: onDelete,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.green[400],
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40),
                       ),
@@ -244,7 +243,7 @@ class _HomeState extends State<Home> {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.delete,
+                            Icons.delete_forever_outlined,
                             color: Colors.white,
                           ),
                           SizedBox(width: 8),
@@ -272,9 +271,9 @@ class _HomeState extends State<Home> {
     final snackBar = SnackBar(
       content: Text(texto),
       duration: Duration(seconds: duracion),
+      backgroundColor: con.efectos,
       action: SnackBarAction(
         onPressed: () {
-          // Cualquier acción al dar clic sobre el widget
         },
         label: 'Cerrar',
       ),
@@ -282,6 +281,7 @@ class _HomeState extends State<Home> {
 
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+
 }
 
 class createCard extends StatelessWidget {
@@ -302,7 +302,7 @@ class createCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int totalEstrellas = 5; // Total de estrellas a mostrar
+    int totalEstrellas = 5;
     int estrellasAmarillas = int.tryParse(NumEstrellas) ?? 0;
 
     return InkWell(

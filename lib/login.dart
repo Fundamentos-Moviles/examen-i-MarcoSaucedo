@@ -206,7 +206,7 @@ class _LoginState extends State<Login> {
                       Text(
                         errorMessage!,
                         style: const TextStyle(
-                          color: Colors.red,
+                          color: efectos,
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -240,7 +240,7 @@ class _LoginState extends State<Login> {
                             print('Usuario incorrecto');
                             errorMessage = 'Usuario incorrecto';
                           } else {
-                            errorMessage = 'Credenciales incorrectas';
+                            errorMessage = 'Usuario y Contraseña incorrectos';
                           }
                         });
                       },
@@ -260,7 +260,7 @@ class _LoginState extends State<Login> {
                     ),
                     const SizedBox(height: 20.0),
                     const Text(
-                      'Mi primer examen,¿estará sencillo?',
+                      'Mi primer examen, ¿estará sencillo?',
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.white,

@@ -13,7 +13,7 @@ const List lista = [
   //ID # numero # titulo # descripción # num de estrellas en amarillo #par e impar
   '1# 21 #Iniciar el examen, para poder ir a dormir tranquilo #Nota: Subir el examen antes de las 9 am del viernes #5 #1',
   '2# 22 #Terminar y enviar mi examen para no reprobar #Nota: No quiero reprobar #4 #2',
-  '3# 23 #Revisar 36 examenes #Nota: Los alumnos tendran todo lo que les pidio #3 #1',
+  '3# 23 #Revisar 36 examenes #Nota: Los alumnos tendrán todo lo que les pidio #3 #1',
   '4# 24 #Revisar tareas #Nota: Llenar la lista con las calificaciones #2 #2',
   '5# 25 #Ponerle 10 a mis alumnos #Nota: Me desperté de buen humor #1 #1',
   '6# 26 #Dar puntos extras #Nota: Mis alumnos lo merecen #0 #2',
